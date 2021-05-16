@@ -41,7 +41,7 @@ class RunningLoop extends Thread {
 				try {
 					QueueManager.validateFirstInQueue();
 					Thread.sleep(60000);
-				} catch (ParseException | IOException | InterruptedException e1) {
+				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
