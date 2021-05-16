@@ -1,0 +1,177 @@
+body{
+    font-family: Helvetica;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(42,96,112,1) 0%, rgba(109,159,159,1) 100%);
+}
+
+@keyframes widthAnim {
+    0% {width: 500px;}
+    50% {width: 95px; top: 450px;}
+    100% {width: 95px; top:630px;}
+}
+
+@keyframes heightAnim {
+    0% {height: 100px;}
+    100% {height: 130px;}
+}
+
+@keyframes posAnim {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+.warning{
+    opacity: 0%;
+    top: 325px;
+    position: absolute;
+    animation-name: posAnim;
+    animation-duration: 2s;
+    animation-fill-mode: forwards; 
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    font-weight: bold;
+    color:white;
+    width: 55%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(56deg, rgb(158, 76, 76) 0%, rgb(184, 75, 75) 100%);
+    border-radius: 10px;
+    padding:18px;
+}
+
+h1{
+    font-family: StoleThisFromTheWebsite;
+    color:rgb(40, 253, 51);
+    font-size: 55px;
+}
+
+h2{
+    color:rgb(159, 184, 199);
+    font-size: 20px;
+    font-family: manuskript;
+}
+
+@font-face{
+    font-family: StoleThisFromTheWebsite;
+    src: url(windlass.woff2);
+}
+
+@font-face {
+    font-family: manuskript;
+    src: url(manuskript-regular.woff);
+}
+
+.authButton, .authButton:visited, .authButton:active{
+    top: 300px;
+    position: absolute;
+    background: linear-gradient(56deg, rgba(109,159,117,1) 0%, rgba(98,184,75,1) 100%);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration:none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+.permsAlign{
+    top: 450px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: heightAnim;
+    animation-delay: 0.5s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards; 
+    overflow: hidden;
+    height: 99px;
+    width: 500px;
+    left: 0;
+    right: 0;
+    border-radius: 50px;
+    padding:18px;
+}
+.permsHeader{
+    display: block;
+    color:rgb(182, 219, 243);
+    font-family: manuskript;
+    text-align: center;
+    font-size: 35px;
+}
+.perm{
+    color:rgb(159, 184, 199);
+    display: block;
+    text-align: left;
+    font-size: 25px;
+}
+.permDesc{
+    color:rgb(53, 73, 85);
+    display: block;
+    position: absolute;
+    text-align: left;
+    left:50px;
+}
+
+a, a:hover, a:visited, a:active {
+    color: inherit;
+}
+
+.header{
+    background: linear-gradient(90deg, rgba(59,55,66,1) 0%, rgba(47,39,62,1) 100%);
+    width: 100%;
+
+    left:0px;
+    margin: 0px;
+    top:0px;
+    position:absolute;
+}
+.profileOutline{
+    top: 450px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(39, 46, 41);
+    color:white;
+    width: 500px;
+    left: 0;
+    right: 0;
+    height:100px;
+    animation-duration: 1s;
+    border-radius: 50px;
+    padding:18px;
+    animation-name: widthAnim;
+    display: inline;
+    animation-fill-mode: forwards; 
+    text-align: right;
+}
+.xboxTextAlign{
+    padding-left: 115px;
+}
+#xboxImage{
+    position:absolute;
+left:15px;
+}
+#xboxName{
+    text-align: left;
+    overflow: hidden;
+    padding-left: inherit;
+    font-size: 50px;
+    font-weight: bold;
+    display: block;
+}
+.footer {
+    color:rgb(163, 163, 163);
+    background: linear-gradient(90deg, rgba(59,55,66,1) 0%, rgba(47,39,62,1) 100%);;
+    margin: 0;
+    padding-top:10px;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    left:0;
+    right: 0;
+}

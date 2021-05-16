@@ -1,0 +1,174 @@
+body{
+    font-family: Helvetica;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(42,96,112,1) 0%, rgba(109,159,159,1) 100%);
+}
+
+h1{
+    font-family: StoleThisFromTheWebsite;
+    color:rgb(40, 253, 51);
+    font-size: 55px;
+}
+
+
+@keyframes posAnim {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+h2{
+    color:rgb(159, 184, 199);
+    font-size: 20px;
+    font-family: manuskript;
+}
+
+@font-face{
+    font-family: StoleThisFromTheWebsite;
+    src: url(windlass.woff2);
+}
+
+@font-face {
+    font-family: manuskript;
+    src: url(manuskript-regular.woff);
+}
+
+.warning{
+    opacity: 0%;
+    top: 300px;
+    position: absolute;
+    animation-name: posAnim;
+    animation-duration: 2s;
+    animation-fill-mode: forwards; 
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    font-weight: bold;
+    color:white;
+    width: 55%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(56deg, rgb(158, 76, 76) 0%, rgb(184, 75, 75) 100%);
+    border-radius: 10px;
+    padding:18px;
+}
+
+.authButton, .authButton:visited, .authButton:active{
+    top: 300px;
+    position: absolute;
+    background: linear-gradient(56deg, rgba(109,159,117,1) 0%, rgba(98,184,75,1) 100%);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration:none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+a, a:hover, a:visited, a:active {
+    color: inherit;
+}
+
+.header{
+    background: linear-gradient(90deg, rgba(59,55,66,1) 0%, rgba(47,39,62,1) 100%);
+    width: 100%;
+
+    left:0px;
+    margin: 0px;
+    top:0px;
+    position:absolute;
+}
+.bugList{
+    top: 380px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 105px;
+    color:white;
+    width: 800px;
+    left: 0;
+    right: 0;
+
+    padding:18px;
+    display: inline;
+    text-align: right;
+}
+.bugDesc{
+    display: block;
+    background-color: rgb(19, 22, 20);
+    margin-top: 30px;
+    height:100%;
+    list-style: none;
+    text-align: left;
+}
+.bugContentHeader{
+    font-size: 20px;
+    padding: 10px;
+}
+.bugContent{  
+    font-size: 16px;
+    font-weight: initial;
+    padding: 10px;
+    padding-left: 50px;
+    
+    
+}
+.xboxTextAlign{
+    padding-left: 115px;
+}
+#xboxImage{
+    position:absolute;
+left:15px;
+}
+.bug{
+    cursor:pointer;
+    margin-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    background-color: rgb(39, 46, 41);
+    text-align: center;
+    overflow: hidden;
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+    height: auto;
+    max-height: 30px;
+    transition: 1s;
+}
+html {
+    scroll-behavior: smooth;
+  }
+.contact{
+    opacity: 75%;
+    margin: 50px;
+    padding: 15px;
+    border-radius: 5px;
+    bottom:105px;
+    background: linear-gradient(90deg, rgba(59,55,66,1) 0%, rgba(47,39,62,1) 100%);;
+    text-align: center;
+    overflow: hidden;
+    padding-left: inherit;
+    font-size: 20px;
+    display: block;
+}
+.bug:hover{
+    max-height: 825px;
+}
+
+.footer {
+    color:rgb(163, 163, 163);
+    background: linear-gradient(90deg, rgba(59,55,66,1) 0%, rgba(47,39,62,1) 100%);;
+    margin: 0;
+    text-align: center;
+    padding-top:10px;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    left:0;
+    right: 0;
+}
