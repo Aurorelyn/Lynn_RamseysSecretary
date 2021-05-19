@@ -2,9 +2,9 @@ package me.Aurorelyn.DiscordBots.RamseySecretary;
 
 import java.io.IOException;
 
-import javax.security.auth.login.LoginException;
-
 import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
