@@ -1,38 +1,48 @@
 package me.Aurorelyn.DiscordBots.RamseySecretary;
 
-import javax.security.auth.login.LoginException;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
+import me.Aurorelyn.DiscordBots.RamseySecretary.backgroundManagers.QueueManager;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Role;
 
-public class DiscordBot implements ServletContextListener{
+/**
+* The Ramsey's Secretary is a discord OAuth implementation that
+* automates the verification of a user's pirate legend status.
+*
+* @author  Aurorelyn (Aurorelyn#4695)
+* @version 1.0
+* @since   05-21-2021
+* 
+*/
+
+/*
+ * Acts as entry class for the project. Starts and manages the discord bot and user queue
+ */
+public class DiscordBot implements ServletContextListener {
 	static JDA bot;
 
-	final static String SERVER_ID = System.getenv("SERVER_ID");//"373312450369683457";
-	final static String ROLE_ID = System.getenv("ROLE_ID");//"843261776380428378";
+	final static String SERVER_ID = System.getenv("SERVER_ID");
+	final static String ROLE_ID = System.getenv("ROLE_ID");
 
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
+		/*
+		 * Functions as main method, runs on project startup
+		 */
 		try {
-		String token = System.getenv("token");
+			String token = System.getenv("token");
 
-		JDABuilder builder = JDABuilder.createDefault(token);
-		bot = builder.build();
-		bot.awaitReady();
-		new RunningLoop().start();
-		}
-		catch(Exception e) {
+			JDABuilder builder = JDABuilder.createDefault(token);
+			bot = builder.build();
+			bot.awaitReady();
+			new RunningLoop().start();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		ServletContextListener.super.contextInitialized(sce);
-	}
-	
-	
-	public static void main(String[] args) throws LoginException, InterruptedException {
-
 	}
 
 	public static void addRolePlRole(String userId) {
@@ -42,6 +52,9 @@ public class DiscordBot implements ServletContextListener{
 }
 
 class RunningLoop extends Thread {
+	/*
+	 * Every minute verify the next user in queue. If queue is empty, wait 5 seconds before checking again.
+	 */
 	@Override
 	public void run() {
 		while (true) {

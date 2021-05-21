@@ -4,12 +4,12 @@
 	<absolute-ordering />
 	<servlet>
 		<servlet-name>RamseySecretaryMain</servlet-name>
-		<servlet-class>me.Aurorelyn.DiscordBots.RamseySecretary.App</servlet-class>
+		<servlet-class>me.Aurorelyn.DiscordBots.RamseySecretary.pages.App</servlet-class>
 	</servlet>
 
 	<servlet>
 		<servlet-name>UserQueue</servlet-name>
-		<servlet-class>me.Aurorelyn.DiscordBots.RamseySecretary.userQueue</servlet-class>
+		<servlet-class>me.Aurorelyn.DiscordBots.RamseySecretary.pages.userQueue</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
