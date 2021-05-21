@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://xmlns.jcp.org/xml/ns/javaee https://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+	<display-name>PirateLegendValidator</display-name>
+	<absolute-ordering />
+	<servlet>
+		<servlet-name>RamseySecretaryMain</servlet-name>
+		<servlet-class>me.Aurorelyn.DiscordBots.RamseySecretary.App</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>UserQueue</servlet-name>
+		<servlet-class>me.Aurorelyn.DiscordBots.RamseySecretary.userQueue</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RamseySecretaryMain</servlet-name>
+		<url-pattern>/validate</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>UserQueue</servlet-name>
+		<url-pattern>/queue</url-pattern>
+	</servlet-mapping>
+
+<listener>
+    <listener-class>
+        me.Aurorelyn.DiscordBots.RamseySecretary.DiscordBot
+    </listener-class>
+</listener>
+
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
