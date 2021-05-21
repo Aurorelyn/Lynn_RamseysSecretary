@@ -40,7 +40,7 @@
              display.textContent = minutes + ":" + seconds;
 
             if (--timer < 0) {
-                timer = "Over! You may close";
+                timer = "Over! You may close!";
             }
     }, 1000);
 }
