@@ -20,7 +20,7 @@ public class CodeHandler {
 
 	private static final String CLIENT_ID = "837022531378085930";
 	private static final String CLIENT_SECRET = "Wl35q85ZnEqOn5bgrgTkW1QRGmTBZA7K";
-	private static final String REDIRECT_URL = "http://localhost:8080/PirateLegendValidator/validate";
+	private static final String REDIRECT_URL = "https://ramseyssecretary.herokuapp.com/validate";
 	private JSONObject discordData;
 	private JSONObject xboxData;
 	
