@@ -56,7 +56,7 @@ public class ValidatePage extends HttpServlet {
 			}
 			req.removeAttribute("code");
 		}
-		
+		req.setAttribute("redirect", System.getenv("REDIRECT_URL"));
         RequestDispatcher view = getServletContext().getRequestDispatcher("/validate.jsp");
         view.forward(req, resp);  
 	}

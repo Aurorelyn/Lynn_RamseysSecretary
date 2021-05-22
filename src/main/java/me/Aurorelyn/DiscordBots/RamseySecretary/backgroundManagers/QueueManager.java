@@ -43,6 +43,13 @@ public class QueueManager {
 		CodeHandler user = userQueue.get(firstKey);
 		
 		if(isPirateLegend(user)) { //If user is a 'pirate legend', tell the discord bot to add the role to the provided discord user id
+			//if(accountInUse(user)) {
+				/*
+				 * Check if the xbox account has already been linked to another account, 
+				 * if so, remove the role from the old account and assign it to the new one.
+				 */
+				//DiscordBot.removePLRole(user.getDiscordData().getString("id"));
+			//}
 			DiscordBot.addRolePlRole(user.getDiscordData().getString("id"));
 		}
 		userQueue.remove(firstKey); //Remove the user from the queue

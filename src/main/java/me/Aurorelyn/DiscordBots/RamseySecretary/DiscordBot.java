@@ -6,6 +6,8 @@ import javax.servlet.ServletContextListener;
 import me.Aurorelyn.DiscordBots.RamseySecretary.backgroundManagers.QueueManager;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.entities.Guild;
+import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Role;
 
 /**
@@ -43,6 +45,17 @@ public class DiscordBot implements ServletContextListener {
 			e.printStackTrace();
 		}
 		ServletContextListener.super.contextInitialized(sce);
+	}
+	
+	public static void removePLRole(String userId) {
+		Role plRole = bot.getRoleById(ROLE_ID);
+		Guild guild = bot.getGuildById(SERVER_ID);
+		Member member =  guild.getMemberById(userId);
+		
+		if(member.getRoles().contains(plRole)) {
+			guild.removeRoleFromMember(member, plRole).queue();
+		}
+		
 	}
 
 	public static void addRolePlRole(String userId) {

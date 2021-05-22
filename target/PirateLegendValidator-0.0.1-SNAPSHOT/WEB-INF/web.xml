@@ -9,7 +9,7 @@
 
 	<servlet>
 		<servlet-name>UserQueue</servlet-name>
-		<servlet-class>me.Aurorelyn.DiscordBots.RamseySecretary.pages.UserQueue</servlet-class>
+		<servlet-class>me.Aurorelyn.DiscordBots.RamseySecretary.pages.UserQueuePage</servlet-class>
 	</servlet>
 
 	<servlet-mapping>

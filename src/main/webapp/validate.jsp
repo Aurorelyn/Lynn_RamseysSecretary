@@ -12,7 +12,7 @@
         <h2>For the Secretary to function properly, you must have your xbox account linked to your Discord.</h2>
         </div>
        
-        <a id="login" class="authButton" style="display:none;" href="https://discord.com/api/oauth2/authorize?client_id=837022531378085930&redirect_uri=https%3A%2F%2Framseyssecretary.herokuapp.com%2Fvalidate&response_type=code&scope=connections%20identify">Identify yourself stranger</a>
+        <a id="login" class="authButton" style="display:none;" href="https://discord.com/api/oauth2/authorize?client_id=837022531378085930&redirect_uri=${redirect}&response_type=code&scope=connections%20identify">Identify yourself stranger</a>
         <div id="showOnLoad" class="permsAlign" style="display:none;">
             <span class="permsHeader">Requested Permissions:</span>
             <span class="perm">> 3rd Party connections:</span>

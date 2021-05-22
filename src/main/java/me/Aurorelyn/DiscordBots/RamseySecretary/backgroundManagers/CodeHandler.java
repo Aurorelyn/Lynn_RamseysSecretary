@@ -20,7 +20,7 @@ public class CodeHandler {
 	private static final String CLIENT_ID = System.getenv("OAUTH_CLIENT_ID");
 	private static final String CLIENT_SECRET = System.getenv("OAUTH_CLIENT_SECRET");
 	
-	private static final String REDIRECT_URL = "https://ramseyssecretary.herokuapp.com/validate";
+	private static final String REDIRECT_URL = System.getenv("REDIRECT_URL").replaceAll("%3A", ":").replaceAll("%2F", "/");
 	private JSONObject discordData;
 	private JSONObject xboxData;
 	
